@@ -12,8 +12,4 @@ public class Category {
 
   @Id
   private String name;
-
-  @ManyToOne
-  @JoinColumn(name = "movieId", referencedColumnName = "id")
-  private Movie movie;
 }

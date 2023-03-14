@@ -1,10 +1,6 @@
 package com.example.cinema.Model;
-
-
-import com.example.cinema.Model.Enums.MovieCategory;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import com.example.cinema.Model.MovieAndShowmanagement.Showtime;
+import jakarta.persistence.*;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -15,15 +11,32 @@ public class Movie {
   // id
   @Id
   private int id;
-
   // Metadata for movie
   private String name;
-  @OneToMany
+  @ManyToMany
   private Set<Category> categories;
   private int ageRestriction;
-  private int rating; // TODO add getter + setters
-  private int length; // TODO add getter + setters
+  private int rating;
+  private int length;
+  @Column(name = "photo")
+  private String photo;
 
+
+  public int getRating() {
+    return rating;
+  }
+
+  public void setRating(int rating) {
+    this.rating = rating;
+  }
+
+  public int getLength() {
+    return length;
+  }
+
+  public void setLength(int length) {
+    this.length = length;
+  }
 
   public int getId() {
     return id;
