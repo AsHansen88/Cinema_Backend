@@ -14,6 +14,10 @@ public class User {
   private int id;
   private String name;
   private int number;
+  private String email;
+  private String password;
+  private String phoneNumber;
+
 
   private ArrayList<Reservation> reservations;
 
