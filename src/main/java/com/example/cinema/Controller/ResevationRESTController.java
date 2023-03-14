@@ -1,6 +1,5 @@
 package com.example.cinema.Controller;
 
-import com.example.cinema.Model.Movie;
 import com.example.cinema.Model.Reservation;
 import com.example.cinema.Repository.ReservationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
