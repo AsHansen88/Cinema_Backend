@@ -24,7 +24,7 @@ public class ResevationRESTController {
 
   @PostMapping("/resevation")
   @ResponseStatus(HttpStatus.CREATED)
-  public Movie postReservations(@RequestBody Reservation reservation) {
+  public Reservation postReservations(@RequestBody Reservation reservation) {
     System.out.println(reservation);
     return reservationRepository.save(reservation);
   }
