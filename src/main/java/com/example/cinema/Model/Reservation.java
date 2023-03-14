@@ -14,5 +14,7 @@ private
   @ManyToOne
   private User user;
 
+  private
+
 
 }
