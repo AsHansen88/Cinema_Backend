@@ -12,12 +12,17 @@ import java.util.Set;
 @Entity
 public class Movie {
 
-   @Id
+  // id
+  @Id
   private int id;
+
+  // Metadata for movie
   private String name;
   @OneToMany
   private Set<Category> categories;
   private int ageRestriction;
+  private int rating; // TODO add getter + setters
+  private int length; // TODO add getter + setters
 
 
   public int getId() {
