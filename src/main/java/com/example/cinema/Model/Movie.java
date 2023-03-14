@@ -20,4 +20,35 @@ public class Movie {
   private int ageRestriction;
 
 
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public Set<Category> getCategories() {
+    return categories;
+  }
+
+  public void setCategories(Set<Category> categories) {
+    this.categories = categories;
+  }
+
+  public int getAgeRestriction() {
+    return ageRestriction;
+  }
+
+  public void setAgeRestriction(int ageRestriction) {
+    this.ageRestriction = ageRestriction;
+  }
 }
