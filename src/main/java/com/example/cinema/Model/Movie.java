@@ -1,26 +1,32 @@
 package com.example.cinema.Model;
-import com.example.cinema.Model.MovieAndShowmanagement.Showtime;
+import com.example.cinema.Model.Enums.MovieCategory;
 import jakarta.persistence.*;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 
 @Entity
 public class Movie {
 
-  // id
   @Id
-  private int id;
+  private int movieId;
+
   // Metadata for movie
   private String name;
-  @ManyToMany
-  private Set<Category> categories;
   private int ageRestriction;
+  private List<MovieCategory> categories;
   private int rating;
   private int length;
   @Column(name = "photo")
   private String photo;
 
+
+  public List<MovieCategory> getCategories() {
+    return categories;
+  }
+
+  public void setCategories(List<MovieCategory> categories) {
+    this.categories = categories;
+  }
 
   public int getRating() {
     return rating;
@@ -38,12 +44,12 @@ public class Movie {
     this.length = length;
   }
 
-  public int getId() {
-    return id;
+  public int getMovieId() {
+    return movieId;
   }
 
-  public void setId(int id) {
-    this.id = id;
+  public void setMovieId(int id) {
+    this.movieId = id;
   }
 
   public String getName() {
@@ -54,13 +60,6 @@ public class Movie {
     this.name = name;
   }
 
-  public Set<Category> getCategories() {
-    return categories;
-  }
-
-  public void setCategories(Set<Category> categories) {
-    this.categories = categories;
-  }
 
   public int getAgeRestriction() {
     return ageRestriction;

@@ -4,13 +4,12 @@ import com.example.cinema.Model.Movie;
 import jakarta.persistence.*;
 
 import java.util.Date;
-import java.util.List;
 
 @Entity
 public class Showtime {
 
     @Id
-    private int id;
+    private int showtimeId;
 
     private Date timeslot;
 

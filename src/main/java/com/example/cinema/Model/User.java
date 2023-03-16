@@ -1,11 +1,11 @@
 package com.example.cinema.Model;
 
+import com.example.cinema.Model.Enums.Role;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,24 +13,26 @@ import java.util.Set;
 public class User {
 
   @Id
-  private int id;
+  private int userId;
   private String name;
   private int number;
   private String email;
   private String password;
   private String phoneNumber;
 
+  private Role userRole;
+
 
   @OneToMany(mappedBy = "user")
   private Set<Reservation> reservations = new HashSet<>();
 
 
-  public int getId() {
-    return id;
+  public int getUserId() {
+    return userId;
   }
 
-  public void setId(int id) {
-    this.id = id;
+  public void setUserId(int id) {
+    this.userId = id;
   }
 
   public String getName() {

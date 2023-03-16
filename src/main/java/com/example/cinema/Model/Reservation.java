@@ -4,14 +4,13 @@ import com.example.cinema.Model.MovieAndShowmanagement.MovieTheater;
 import com.example.cinema.Model.MovieAndShowmanagement.Showtime;
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
 import java.util.Set;
 
 @Entity
 public class Reservation {
 
   @Id
-  private int id;
+  private int reservationId;
 
 
 
@@ -25,7 +24,7 @@ public class Reservation {
   @JoinColumn(name = "theaterId", referencedColumnName = "id")
   private MovieTheater movieTheater;
   @OneToMany
-  private Set<Showtime> showtimes;
+  private Set<Showtime> showtime;
 
 
 
