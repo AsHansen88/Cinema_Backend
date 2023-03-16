@@ -1,10 +1,8 @@
 package com.example.cinema.Model.MovieAndShowmanagement;
 
-import com.example.cinema.Model.Reservation;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
+
 
 @Entity
 public class Seat {
@@ -12,6 +10,8 @@ public class Seat {
 
     @Id
     private int seatId;
+    private int rowNo;
+    private int seatNo;
 
     public int getSeatId() {
         return seatId;
