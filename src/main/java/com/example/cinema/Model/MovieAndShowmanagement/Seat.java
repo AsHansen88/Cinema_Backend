@@ -13,10 +13,27 @@ public class Seat {
     @Id
     private int seatId;
 
-    @ManyToOne
-    private Row row;
+    public int getSeatId() {
+        return seatId;
+    }
 
+    public void setSeatId(int seatId) {
+        this.seatId = seatId;
+    }
 
-    @OneToOne
-    private Reservation reservationId;
+    public int getRowNo() {
+        return rowNo;
+    }
+
+    public void setRowNo(int rowNo) {
+        this.rowNo = rowNo;
+    }
+
+    public int getSeatNo() {
+        return seatNo;
+    }
+
+    public void setSeatNo(int seatNo) {
+        this.seatNo = seatNo;
+    }
 }

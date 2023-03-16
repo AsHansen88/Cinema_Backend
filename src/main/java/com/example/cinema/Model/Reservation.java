@@ -12,17 +12,14 @@ public class Reservation {
   @Id
   private int reservationId;
 
-
-
-  // Cause one user can have multiple reservations right?
   @ManyToOne
-  @JoinColumn(name = "userId", referencedColumnName = "id")
+  @JoinColumn(name = "userId", referencedColumnName = "userId")
   private User user;
 
-
   @ManyToOne
-  @JoinColumn(name = "theaterId", referencedColumnName = "id")
+  @JoinColumn(name = "theaterId", referencedColumnName = "movieTheaterId")
   private MovieTheater movieTheater;
+
   @OneToMany
   private Set<Showtime> showtime;
 

@@ -14,7 +14,9 @@ public class Showtime {
     private Date timeslot;
 
     @ManyToOne
-    @JoinColumn(name = "movieId", referencedColumnName = "id")
+    @JoinColumn(name = "movieId", referencedColumnName = "movieId")
     private Movie movie;
+
+
 
 }
