@@ -4,13 +4,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class Workers {
+public class Worker {
 
     @Id
     private int workerId;
     private String workerName;
-    private String role;
+    private String WorkerPassword;
 
+       
 //Eventuel ono to one relationship da en worker ville have en account?
 
 
@@ -22,10 +23,6 @@ public class Workers {
         return workerName;
     }
 
-    public String getRole() {
-        return role;
-    }
-
     public void setWorkerId(int workerId) {
         this.workerId = workerId;
     }
@@ -34,7 +31,12 @@ public class Workers {
         this.workerName = workerName;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public String getWorkerPassword() {
+        return WorkerPassword;
     }
+
+    public void setWorkerPassword(String workerPassword) {
+        WorkerPassword = workerPassword;
+    }
+
 }
