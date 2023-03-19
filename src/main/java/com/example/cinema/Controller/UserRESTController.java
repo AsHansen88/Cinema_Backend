@@ -20,11 +20,14 @@ public class UserRESTController {
         return userInterface.findAll();
     }
 
-    @PostMapping("user")
+    @PostMapping("/userLogin")
     @ResponseStatus(HttpStatus.CREATED)
     public User postUser(@RequestBody User user) {
         System.out.println(user);
         return userInterface.save(user);
-
     }
+
+   
+
+
 }

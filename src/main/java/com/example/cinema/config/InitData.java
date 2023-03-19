@@ -17,6 +17,7 @@ public class InitData implements CommandLineRunner {
     MovieRepository movieRepository;
     @Override
     public void run(String... args) throws Exception {
+        /*
         List<MovieCategory> genreList = new ArrayList<>();
         genreList.add(MovieCategory.ACTION);
         genreList.add(MovieCategory.COMEDY);
@@ -32,6 +33,6 @@ public class InitData implements CommandLineRunner {
 
         movieRepository.save(m1);
         System.out.println(m1);
-
+        */
     }
 }

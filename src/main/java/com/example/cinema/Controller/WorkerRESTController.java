@@ -22,13 +22,14 @@ public class WorkerRESTController {
       return workerRepository.findAll();
     }
 
-    @PostMapping("worker")
+    @PostMapping("/WorkerLogin")
     @ResponseStatus(HttpStatus.CREATED)
     public Worker postWorker(@RequestBody Worker worker) {
       System.out.println(worker);
       return workerRepository.save(worker);
-
     }
+
+
   }
 
 

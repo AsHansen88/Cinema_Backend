@@ -1,6 +1,6 @@
 package com.example.cinema.Model;
 
-import com.example.cinema.Model.Enums.Role;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
@@ -19,17 +19,12 @@ public class User {
   private String email;
   private String password;
   private String phoneNumber;
-  private Role userRole;
   @OneToMany(mappedBy = "user")
   private Set<Reservation> reservations = new HashSet<>();
 
-  public Role getUserRole() {
-    return userRole;
-  }
 
-  public void setUserRole(Role userRole) {
-    this.userRole = userRole;
-  }
+
+
 
   public int getUserId() {
     return userId;

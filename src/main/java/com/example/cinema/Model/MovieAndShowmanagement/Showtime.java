@@ -17,6 +17,4 @@ public class Showtime {
     @JoinColumn(name = "movieId", referencedColumnName = "movieId")
     private Movie movie;
 
-
-
 }
