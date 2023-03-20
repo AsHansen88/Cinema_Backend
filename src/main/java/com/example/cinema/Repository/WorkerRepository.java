@@ -4,5 +4,8 @@ import com.example.cinema.Model.Worker;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface WorkerRepository extends JpaRepository<Worker, Strings> {
+import java.util.Optional;
+
+public interface WorkerRepository extends JpaRepository<Worker, Integer> {
+    Optional<Worker> findWorkerByWorkerName(String workerName);
 }

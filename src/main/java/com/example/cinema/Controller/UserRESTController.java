@@ -27,7 +27,5 @@ public class UserRESTController {
         return userInterface.save(user);
     }
 
-   
-
 
 }

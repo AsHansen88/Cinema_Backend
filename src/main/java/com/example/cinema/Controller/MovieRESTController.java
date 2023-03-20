@@ -35,7 +35,7 @@ public class MovieRESTController {
 
   @GetMapping("/movie/showtimes/{movieId}")
   public List<Showtime> getShowtimeByMovieId(@PathVariable int movieId) {
-    List<Showtime> showtimeList= showtimeRepository.findShowtimeByMovie_MovieIdOrderByTimeslot(movieId);
+    List<Showtime> showtimeList = showtimeRepository.findShowtimeByMovie_MovieIdOrderByTimeslot(movieId);
     // TODO figure out if the repository String/Integer mixup is causing problems
     return showtimeList;
   }
