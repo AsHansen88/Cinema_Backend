@@ -1,8 +1,6 @@
 package com.example.cinema.Model.MovieAndShowmanagement;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -14,6 +12,7 @@ public class MovieTheater {
 
   // There's 2 theaters in DB
   @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private int movieTheaterId;
   @OneToMany
   private Set<Showtime> showtimes = new HashSet<>();

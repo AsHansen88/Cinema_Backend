@@ -1,9 +1,7 @@
 package com.example.cinema.Model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 
 
 import java.util.HashSet;
@@ -13,6 +11,7 @@ import java.util.Set;
 public class User {
 
   @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private int userId;
   private String name;
   private int number;

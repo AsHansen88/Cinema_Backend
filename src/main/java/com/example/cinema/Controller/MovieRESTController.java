@@ -25,8 +25,8 @@ public class MovieRESTController {
     return movieRepository.findAll();
   }
 
-@PostMapping("/movie")
-@ResponseStatus(HttpStatus.CREATED)
+  @PostMapping("/movie")
+  @ResponseStatus(HttpStatus.CREATED)
 
   public Movie postMovie(@RequestBody Movie movie){
   System.out.println(movie);
@@ -34,9 +34,8 @@ public class MovieRESTController {
   }
 
   @GetMapping("/movie/showtimes/{movieId}")
-  public List<Showtime> getShowtimeByMovieId(@PathVariable int movieId) {
+  public List<Showtime> getShowtimeByMovieId(@PathVariable("movieId") int movieId) {
     List<Showtime> showtimeList = showtimeRepository.findShowtimeByMovie_MovieIdOrderByTimeslot(movieId);
-    // TODO figure out if the repository String/Integer mixup is causing problems
     return showtimeList;
   }
 

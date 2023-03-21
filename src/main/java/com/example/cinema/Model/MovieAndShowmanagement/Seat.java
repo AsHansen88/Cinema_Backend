@@ -1,6 +1,8 @@
 package com.example.cinema.Model.MovieAndShowmanagement;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 
@@ -9,6 +11,7 @@ public class Seat {
 
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int seatId;
     private int rowNo;
     private int seatNo;

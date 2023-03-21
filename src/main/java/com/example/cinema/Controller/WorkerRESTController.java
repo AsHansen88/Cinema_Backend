@@ -29,6 +29,7 @@ public class WorkerRESTController {
       System.out.println(worker);
       return workerRepository.save(worker);
     }
+    
     /*
     @GetMapping("/login")
     public ResponseEntity<String> login(@RequestBody Worker worker){
@@ -38,8 +39,8 @@ public class WorkerRESTController {
         // TODO fix error
         return new ResponseEntity<String>(HttpStatus.OK,"Du er nu logget ind");
     }
+    */
 
-     */
 
   }
 

@@ -1,11 +1,14 @@
 package com.example.cinema.Model.MovieAndShowmanagement;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 
 public class ReservedSeat {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int reservedSeatId;
 
     @JoinColumn(name = "seatId", referencedColumnName = "seatId")

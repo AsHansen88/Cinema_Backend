@@ -5,6 +5,6 @@ import org.apache.logging.log4j.util.Strings;
 import com.example.cinema.Model.User;
 
 
-public interface UserInterface extends JpaRepository<User, Strings> {
+public interface UserInterface extends JpaRepository<User, Integer> {
 
 }
