@@ -18,6 +18,7 @@ public class ShowtimeRESTController {
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<String> createShowtime(@RequestBody Showtime showtime) {
         System.out.println(showtime);
+        // make a dummy showtime to test it
         showtimeRepository.save(showtime);
         // TODO Be sure that the entry for fits with this: Hibernate: insert into showtime (movie_id, movie_theater_id, timeslot, showtime_id) values (?, ?, ?, ?)
         return new ResponseEntity<>("Things worked out great",HttpStatus.OK);

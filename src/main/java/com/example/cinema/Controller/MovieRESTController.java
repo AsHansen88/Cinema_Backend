@@ -27,7 +27,6 @@ public class MovieRESTController {
 
   @PostMapping("/movie")
   @ResponseStatus(HttpStatus.CREATED)
-
   public Movie postMovie(@RequestBody Movie movie){
   System.out.println(movie);
   return movieRepository.save(movie);
