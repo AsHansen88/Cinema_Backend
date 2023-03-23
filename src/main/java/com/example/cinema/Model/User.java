@@ -13,6 +13,8 @@ public class User {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private int userId;
+
+
   private String name;
   private int number;
   private String email;

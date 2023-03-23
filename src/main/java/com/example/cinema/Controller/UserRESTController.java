@@ -23,16 +23,11 @@ public class UserRESTController {
     }
 
     @PostMapping("/userLogin")
-    //@ResponseStatus(HttpStatus.ACCEPTED)
     public ResponseEntity<String> postUser(@RequestBody User user) {
         System.out.println(user);
         System.out.println(user.getName());
         System.out.println(user.getPassword());// test
-        /*
-        userInterface.findUserByNameAndAndPassword(user.getName(), user.getPassword()).ifPresentOrElse(
-                (value) -> new ResponseEntity<>("Userlogin Successful",HttpStatus.ACCEPTED),
-                () -> new ResponseEntity<>("Userlog Unsuccessful", HttpStatus.NOT_ACCEPTABLE));
-                ); */
+
         Optional<User> loginUser = userInterface.findUserByNameAndAndPassword(user.getName(), user.getPassword());
         if (loginUser.isPresent()) {
             return new ResponseEntity<>("Userlogin Successful", HttpStatus.ACCEPTED);
@@ -40,4 +35,10 @@ public class UserRESTController {
         else
             return new ResponseEntity<>("Userlogin Unsuccessful", HttpStatus.UNAUTHORIZED);
     }
+
+    @PostMapping("/createUser")
+    public User createUser(@RequestBody User user) {
+        return userInterface.save(user);
+    }
+
 }
