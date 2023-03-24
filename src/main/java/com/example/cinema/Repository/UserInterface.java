@@ -11,5 +11,6 @@ public interface UserInterface extends JpaRepository<User, Integer> {
 
 
     Optional<User> findUserByNameAndAndPassword(String name, String password);
+    User findUserByName(String name);
 
 }

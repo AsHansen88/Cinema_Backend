@@ -37,8 +37,16 @@ public class UserRESTController {
     }
 
     @PostMapping("/createUser")
-    public User createUser(@RequestBody User user) {
-        return userInterface.save(user);
+    public ResponseEntity<String> createUser(@RequestBody User user) {
+        // TODO Refactor this business logic to service layer if theres time
+        User tempUser = userInterface.findUserByName(user.getName());
+        if (tempUser.getName() == user.getName()) {
+            return new ResponseEntity<>("User already exists", HttpStatus.UNAUTHORIZED);
+        }
+        else {
+            userInterface.save(user);
+            return new ResponseEntity<>("User successfully created", HttpStatus.CREATED);
+        }
     }
 
 }
